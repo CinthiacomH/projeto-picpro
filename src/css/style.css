@@ -1,7 +1,7 @@
 body {
-  background-color: #228664;
   font-family: "Poppins", sans-serif;
 }
+
 .container {
   width: 100%;
   max-width: 800px;
@@ -9,7 +9,13 @@ body {
 }
 
 .cabecalho {
-  padding: 20px 0;
+  background-color: #228664;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  max-width: 1170px;
+  margin: 0 auto;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -28,9 +34,22 @@ body {
   margin-right: 15px;
 }
 
+@media(max-width: 624px){
+  .cabecalho{
+      justify-content: center;
+  }
+}
+
 .secaoDetalhesConta {
+  background-color: #228664;
   color: #fff;
-  padding: 60px 0 30px;
+  display: flex;
+  padding: 25px 0;
+  max-width: 1170px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .secaoDetalhesConta__sobreUsuario {
@@ -39,11 +58,13 @@ body {
   margin-bottom: 20px;
   justify-content: space-between;
 }
+
 .secaoDetalhesConta__sobreUsuario--nome,
 .secaoDetalhesConta__sobreUsuario--icones {
   display: flex;
   align-items: center;
 }
+
 .secaoDetalhesConta__sobreUsuario--icones img {
   margin: 0 10px;
 }
@@ -52,6 +73,7 @@ body {
   font-size: 18px;
   margin-left: 10px;
 }
+
 .secaoDetalhesConta__sobreUsuario img {
   width: 100%;
   max-width: 50px;
@@ -69,20 +91,49 @@ body {
   padding: 30px 0;
   align-items: center;
 }
-.secaoDetalhesConta__sobreSaldo--valor {
-  display: flex;
-}
 
 .secaoDetalhesConta__sobreSaldo p {
   font-size: 18px;
   line-height: 22px;
 }
 
-.secaoDetalhesConta__sobreSaldo--valor p {
-  font-weight: 600;
+.secaoDetalhesConta__sobreSaldo--valor {
+  display: flex;
 }
 
 .secaoDetalhesConta__sobreSaldo--valor img {
+  display: block;
+  height: 18px;
+  width: 30px;
+  margin-left: 12px;
+}
+
+#alternar-1 {
+  display:none;
+}
+
+#mostra {
+  display:none;
+}
+
+#mostra p {
+  font-weight: 600;
+}
+
+/* CSS quando o checkbox está marcado */
+#alternar-1:checked ~ #mostra {
+  display:block;
+}
+
+label {
+ -webkit-appearance: push-button;
+ -moz-appearance: button;
+ display: inline-block;
+ cursor: pointer;
+ padding: 5px;
+}
+
+label img{
   display: block;
   height: 18px;
   width: 30px;
@@ -130,9 +181,15 @@ body {
   background-color: #fff;
   border-radius: 20px 20px 0 0;
   border-bottom: 15px solid #f0f0f0;
-  padding: 30px 0;
-  min-height: 450px;
+  display: flex;
+  padding: 25px 0;
+  max-width: 1170px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
+
 .secaoTransacao .container div {
   display: none;
 }
@@ -241,6 +298,7 @@ body {
 
 .secaoTransacao__cobrar {
 }
+
 .secaoTransacao__cobrar img {
   width: 100%;
   max-width: 80px;
@@ -263,6 +321,12 @@ body {
 
 .rodape {
   background-color: #fff;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .rodape__menuPrincipal {
@@ -300,6 +364,7 @@ body {
   background-color: #fff;
   color: #228664;
 }
+
 .secaoDetalhesConta__itemTransacao figure {
   background-repeat: no-repeat;
   background-size: cover;
@@ -316,19 +381,23 @@ body {
   height: 50px;
   width: 50px;
 }
+
 .secaoDetalhesConta__itemTransacao--pix figure {
   background-image: url("../img/pix.png");
 }
+
 .secaoDetalhesConta__itemTransacao--boleto figure {
   background-image: url("../img/codigo.png");
   width: 100%;
   max-width: 65px;
 }
+
 .secaoDetalhesConta__itemTransacao--cobrar figure {
   background-image: url("../img/cobrar-icon.png");
   width: 100%;
   max-width: 60px;
 }
+
 /* EFEITO HOVERS */
 .secaoDetalhesConta__itemTransacao--qrCode:hover figure {
   background-image: url("../img/qrcode-verde.png");
