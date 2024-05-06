@@ -1,0 +1,9 @@
+@media(max-width: 624px){
+    .itemTransacao{
+       width: 25%;
+    }
+
+    .secaoDetalhesConta__opcoesTransacoes li {
+        width: 90%;
+      }
+}

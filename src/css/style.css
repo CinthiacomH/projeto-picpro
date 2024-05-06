@@ -1,5 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #228664;
 }
 
 .container {
@@ -9,7 +10,6 @@ body {
 }
 
 .cabecalho {
-  background-color: #228664;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,14 +34,7 @@ body {
   margin-right: 15px;
 }
 
-@media(max-width: 624px){
-  .cabecalho{
-      justify-content: center;
-  }
-}
-
 .secaoDetalhesConta {
-  background-color: #228664;
   color: #fff;
   display: flex;
   padding: 25px 0;
@@ -84,6 +77,7 @@ body {
   font-weight: bold;
 }
 
+
 .secaoDetalhesConta__sobreSaldo {
   border-top: 1px solid #000;
   display: flex;
@@ -93,31 +87,31 @@ body {
 }
 
 .secaoDetalhesConta__sobreSaldo p {
+  display: flex;
   font-size: 18px;
   line-height: 22px;
 }
 
-.secaoDetalhesConta__sobreSaldo--valor {
-  display: flex;
-}
-
-.secaoDetalhesConta__sobreSaldo--valor img {
+.secaoDetalhesConta__sobreSaldo img {
   display: block;
   height: 18px;
   width: 30px;
   margin-left: 12px;
 }
+.secaoDetalhesConta__sobreSaldo--valor {
+  display: flex;
+}
+
+.secaoDetalhesConta__sobreSaldo--valor #mostra {
+  display:none;
+}
+
+.secaoDetalhesConta__sobreSaldo--valor #mostra p {
+  font-weight: 600;
+}
 
 #alternar-1 {
   display:none;
-}
-
-#mostra {
-  display:none;
-}
-
-#mostra p {
-  font-weight: 600;
 }
 
 /* CSS quando o checkbox está marcado */
@@ -150,17 +144,18 @@ label img{
   cursor: pointer;
 }
 
-.secaoDetalhesConta__opcoesTransacoes {
+.secaoDetalhesConta__opcoesTransacoes ul{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .secaoDetalhesConta__opcoesTransacoes li {
   background-color: #1f6f54;
   width: 170px;
   height: 177px;
-  border-radius: 20px;
   padding: 40px 20px;
+  margin: 10px;
+  border-radius: 20px; 
   cursor: pointer;
 }
 
@@ -266,9 +261,6 @@ label img{
   line-height: 20px;
 }
 
-.secaoTransacao__boleto {
-}
-
 .secaoTransacao__boleto img {
   width: 100%;
   max-width: 80px;
@@ -294,9 +286,6 @@ label img{
   border: 1px solid #d2d2d2;
   color: #000;
   box-sizing: border-box;
-}
-
-.secaoTransacao__cobrar {
 }
 
 .secaoTransacao__cobrar img {
